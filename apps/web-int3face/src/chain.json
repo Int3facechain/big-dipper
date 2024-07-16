@@ -223,8 +223,8 @@
       "votingPowerTokenUnit": "uint3",
       "tokenUnits": {
         "uint3": {
-          "display": "int3",
-          "exponent": 6
+          "display": "uint3",
+          "exponent": 0
         }
       },
       "endpoints": {
