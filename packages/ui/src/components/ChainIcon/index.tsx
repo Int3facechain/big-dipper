@@ -94,6 +94,10 @@ import jackalLogoDark from 'shared-utils/assets/logos/jackal-dark.svg?url';
 import jackalLogoLight from 'shared-utils/assets/logos/jackal-light.svg?url';
 import archwayLogoDark from 'shared-utils/assets/logos/archway-dark.svg?url';
 import archwayLogoLight from 'shared-utils/assets/logos/archway-light.svg?url';
+import int3faceIconDark from 'shared-utils/assets/icons/int3face-dark.svg?url';
+import int3faceIconLight from 'shared-utils/assets/icons/int3face-light.svg?url';
+import int3faceLogoDark from 'shared-utils/assets/logos/int3face-dark.svg?url';
+import int3faceLogoLight from 'shared-utils/assets/logos/int3face-light.svg?url';
 
 interface IconProps extends Omit<ImageProps, 'id' | 'src'> {
   type: 'icon' | 'logo';
@@ -111,6 +115,12 @@ const ChainIcon = ({
   let [iconDark, iconLight] =
     type === 'icon' ? [baseIconLight, baseIconLight] : [baseLogoLight, baseLogoLight];
   switch (chainName) {
+    case 'int3face':
+      [iconDark, iconLight] =
+        type === 'icon'
+          ? [int3faceIconDark, int3faceIconLight]
+          : [int3faceLogoDark, int3faceLogoLight];
+      break;
     case 'agoric':
       [iconDark, iconLight] =
         type === 'icon'
